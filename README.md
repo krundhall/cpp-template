@@ -1,7 +1,5 @@
 # C++ Project Template
 
-Minimal modern C++ project template.
-
 Uses:
 - CMake with CMake Presets
 - Ninja
