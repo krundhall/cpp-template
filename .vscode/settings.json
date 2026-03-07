@@ -1,5 +1,7 @@
 {
-  "cmake.useCMakePresets": "always",
-  "cmake.configureOnOpen": true,
-  "editor.formatOnSave": true
+    "cmake.useCMakePresets": "always",
+    "cmake.configureOnOpen": true,
+    "cmake.defaultConfigurePreset": "asan",
+    "cmake.defaultBuildPreset": "asan",
+    "editor.formatOnSave": true
 }

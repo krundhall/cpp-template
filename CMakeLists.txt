@@ -12,15 +12,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Output Directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 # LSP Support
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Main Target
+file(GLOB_RECURSE SOURCES src/*.cpp)
+
 add_executable(${PROJECT_NAME}
-    src/main.cpp
+    ${SOURCES}
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -29,6 +29,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 
 # Compiler Warnings
 target_compile_options(${PROJECT_NAME} PRIVATE
-    $<$<CXX_COMPILER_ID:MSVC>:/W4 /WX>
-    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic>
+    -Wall -Wextra -Wpedantic
 )
