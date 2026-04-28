@@ -1,7 +1,8 @@
 {
-    "cmake.useCMakePresets": "always",
+    "editor.formatOnSave": true,
+    "cmake.useCMakePresets": "never",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.buildType": "Debug",
     "cmake.configureOnOpen": true,
-    "cmake.defaultConfigurePreset": "asan",
-    "cmake.defaultBuildPreset": "asan",
-    "editor.formatOnSave": true
+    "clangd.arguments": ["--compile-commands-dir=${workspaceFolder}/build"]
 }
